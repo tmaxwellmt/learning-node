@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-// app.get is 
+// app.get pushes data from serverto localhost front end
 
 app.get('/greeting', function (req, res) {
   res.send("You found the greeting endpoint")
