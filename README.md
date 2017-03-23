@@ -13,4 +13,5 @@ client makes a request, server responds
 
 
 'nodemon server.js' - starts and keeps server running and updates with out having to start server.
-s
+
+use postman to test app.push, app.get, ect.
