@@ -21,7 +21,8 @@ app.get('/sad', function (req, res) {
 app.post('/login', function (req, res) {
   var name = req.body.name;
   var password = req.body.password;
-  var user = { name: name, password: password}
+  var test = req.body.test;
+  var user = { name: name, password: password, test: test }
   res.json(user);
 
 });
