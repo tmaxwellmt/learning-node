@@ -14,5 +14,5 @@
 //
 // }
 
-var assignGrade = (score >= 90) ? (score >= 80) ? (score >= 70) ? (score >= 60) : "A":"B":"C":"D";
+var assignGrade = (score >= 90) ? "A") (score >= 80) ? "B") (score >= 70) ? "C");
  console.log(assignGrade(82));

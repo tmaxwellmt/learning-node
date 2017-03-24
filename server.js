@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
+var data = [2, 5, 82, 67, 5];
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -21,10 +22,26 @@ app.get('/sad', function (req, res) {
 app.post('/login', function (req, res) {
   var name = req.body.name;
   var password = req.body.password;
-  var test = req.body.test;
-  var user = { name: name, password: password, test: test }
+  var user = { name: name, password: password}
   res.json(user);
+});
 
+app.get('/postdata', function (req, res) {
+  req.data ={};
+  req.data.test = 1;
+  res.send(req.data);
+});
+
+app.post('/postdata/:_id', function (req, res) {
+  var num = req.params._id;
+  data.push(num);
+  res.send(data);
+});
+
+app.get('/testquery', function (req, res) {
+  var test = req.query;
+  data.push(test);
+  res.send(data);
 });
 
 var server = app.listen(3000, function () {
